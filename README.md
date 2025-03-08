@@ -1,70 +1,136 @@
-# Getting Started with Create React App
+# 🍽 Recipe Sharing Platform (MERN)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a full-stack **Recipe Sharing Platform** built using the **MERN stack** (MongoDB, Express.js, React, and Node.js). The platform allows users to register, log in, explore recipes, and manage their own recipes. Users can also like, favorite, and filter recipes.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🛠 Tech Stack
 
-### `npm start`
+- **Frontend**: React.js, React Router, Bootstrap 5, Axios  
+- **Backend**: Node.js, Express.js, MongoDB, Mongoose  
+- **Authentication**: JWT (JSON Web Token), bcrypt  
+- **Database**: MongoDB  
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🚀 Features
 
-### `npm test`
+✅ **User Authentication** (Signup, Login)  
+✅ **CRUD Operations** (Create, Read, Update, Delete Recipes)  
+✅ **Image Upload** for recipes  
+✅ **User Profile Management**  
+✅ **Like & Favorite Recipes**  
+✅ **Search & Filter Recipes**  
+✅ **Responsive UI** with Bootstrap  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 📂 Project Structure
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+recipe-sharing-platform/
+│── node_modules/            # Dependencies
+│── backend/                 # Backend Code (Node.js, Express.js)
+│   ├── config/              # Database configuration
+│   ├── models/              # Mongoose schemas
+│   ├── routes/              # API routes
+│   ├── controllers/         # Route logic
+│   ├── middleware/          # Auth middleware
+│   ├── uploads/             # Recipe images
+│   ├── server.js            # Entry point
+│── frontend/                # Frontend Code (React.js)
+│   ├── public/              # Static assets (favicon, manifest)
+│   ├── src/
+│   │   ├── components/      # Reusable components (Navbar, RecipeCard, etc.)
+│   │   ├── pages/           # Page components (Home, About, Contact)
+│   │   ├── App.js           # Main App component
+│   │   ├── index.js         # React entry point
+│   │   ├── App.css          # Global styles
+│── .env                     # Environment variables
+│── package.json             # Dependencies & scripts
+│── README.md                # Documentation
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🔧 Installation & Setup
 
-### `npm run eject`
+### 1️⃣ Clone the Repository
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```sh
+git clone https://github.com/your-username/recipe-sharing-platform.git
+cd recipe-sharing-platform
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 2️⃣ Install Dependencies
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```sh
+npm install
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 3️⃣ Set Up Environment Variables
 
-## Learn More
+Create a **.env** file in the root directory and add:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+MONGO_URI=your-mongodb-connection-string
+JWT_SECRET=your-secret-key
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 4️⃣ Run the Backend Server
 
-### Code Splitting
+```sh
+cd backend
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### 5️⃣ Run the Frontend
 
-### Analyzing the Bundle Size
+Open a new terminal and run:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```sh
+cd frontend
+npm start
+```
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 🔗 API Endpoints
 
-### Advanced Configuration
+### 🛠 **Authentication**
+- **POST** `/api/auth/signup` – Register a new user  
+- **POST** `/api/auth/login` – User login  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### 📖 **Recipes**
+- **GET** `/api/recipes` – Get all recipes  
+- **POST** `/api/recipes` – Add a new recipe  
+- **PUT** `/api/recipes/:id` – Update a recipe  
+- **DELETE** `/api/recipes/:id` – Delete a recipe  
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 📌 Future Enhancements
 
-### `npm run build` fails to minify
+🔹 **User Dashboard for Personalized Recipes**  
+🔹 **Advanced Filtering & Sorting**  
+🔹 **Comments & Reviews on Recipes**  
+🔹 **Recipe Rating System**  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+## 🎯 Contributing
+
+Feel free to **fork this repository** and contribute!  
+If you have feature improvements, submit a **pull request**.  
+
+---
+
+## 📜 License
+
+This project is **open-source** and available under the MIT License.
+
+---
+
+🚀 **Happy Cooking & Coding!** 🍳✨
+
+---
